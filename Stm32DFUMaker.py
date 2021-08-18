@@ -5,7 +5,7 @@ import argparse
 DEFAULT_ADDRESS = 0x8000000
 
 class FileAddressPair:    
-    def __init__(self, path, address=0x8000000):
+    def __init__(self, path, address=DEFAULT_ADDRESS):
         self.path = path
         self.address = int(address)
 
@@ -17,7 +17,7 @@ class FileAddressPair:
         self.address = int(x[1], base=16)
 
 cmdParser = argparse.ArgumentParser(
-    description='Converts a production params bin file to a DFU', prog="DFUMaker")
+    description='Creates DFU file from bin files', prog="DFUMaker")
 cmdParser.add_argument(
     '--bin', action='append', nargs=1, type=FileAddressPair, required=True,
     help='Path and address to the bin file that should be converted, can be passed more then once for multiple bin files\n\
