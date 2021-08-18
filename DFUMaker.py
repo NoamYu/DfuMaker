@@ -29,7 +29,9 @@ cmdParser.add_argument(
 
 args = cmdParser.parse_args()
 
-productionParamsBin = BinFile(
-    args.bin[0][0].path, args.bin[0][0].address)
-productionParamsDfu = DFUFile([productionParamsBin])
+productionParamsBin = []
+for fileAddrPair in args.bin[0]:
+    productionParamsBin.append(BinFile(fileAddrPair.path, fileAddrPair.address))
+
+productionParamsDfu = DFUFile(productionParamsBin)
 productionParamsDfu.write_DFU_to_file(args.dst[0])
