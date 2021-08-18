@@ -143,5 +143,9 @@ cython_debug/
 *.exe
 *.bat
 *.cfg
+<<<<<<< HEAD
 activate
 activate.ps1
+=======
+activate*
+>>>>>>> cebe067... DFUMaker v0.1
