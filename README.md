@@ -10,6 +10,6 @@ You can see the instructions by caliing the script with the --help flag.
 
 ## Example 
 ```
-Python ./DFUMaker.py --bin ./file0.bin,0x800000000 --bin ./file1.bin,0x80002000  --dst
+Python ./Stm32DFUMaker.py --bin ./file0.bin,0x800000000 --bin ./file1.bin,0x80002000  --dst
 ./file.dfu
 ```
